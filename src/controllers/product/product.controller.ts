@@ -32,8 +32,7 @@ export class ProductController {
 
   @Post()
   createProduct(@Body() createProductDto: CreateProductDto) {
-    console.log(createProductDto);
-    return 123;
+    return this.productService.create(createProductDto);
   }
 
   @Delete(':id')
